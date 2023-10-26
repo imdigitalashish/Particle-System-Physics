@@ -33,6 +33,12 @@ class Application {
 
 }
 
+/**
+ * 
+ * window.onload not using because there may be cases in which it can occur more than once therefore that's
+ * avoided and DOMContentLoaded is more reliable
+ */
+
 window.addEventListener("DOMContentLoaded", function () {
     this.window.application = new Application();
 })

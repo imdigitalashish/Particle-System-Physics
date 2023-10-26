@@ -2,13 +2,16 @@ class Particle {
     constructor(effect) {
 
         this.effect = effect;
-        this.radius = 15;
+        this.radius = Math.random() * 40 + 5;
 
         /**
          * Because we need the whole circle, therefore diameter = 2 * radius, so we need the radius
          */
         this.x = this.radius + Math.random() * (this.effect.width - this.radius * 2);
         this.y = this.radius + Math.random() * (this.effect.height - this.radius * 2);
+
+        this.vx = Math.random() * 4 - 2;
+        this.vy = Math.random() * 4 - 2;
 
     }
 
@@ -22,7 +25,13 @@ class Particle {
     }
 
     update() {
-        this.x++;
+        this.x += this.vx;
+
+        if (this.x > this.effect.width - this.radius || this.x < this.radius) this.vx *= -1;
+
+        this.y += this.vy;
+        if (this.y > this.effect.height - this.radius || this.y < this.radius) this.vy *= -1;
+
     }
 
 }
