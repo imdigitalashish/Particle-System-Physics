@@ -6,7 +6,7 @@ class Effect {
         this.width = this.canvas.width;
         this.height = this.canvas.height;
         this.particles = [];
-        this.numberOfParticles = 20;
+        this.numberOfParticles = 200;
         this.createParticles();
     }
 
@@ -20,6 +20,7 @@ class Effect {
     handleParticles(context) {
         this.particles.forEach(particle => {
             particle.draw(context);
+            particle.update()
         })
     }
 }
