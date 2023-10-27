@@ -18,7 +18,9 @@ To install the Particle System Physics, follow these steps:
 ```bash
 git clone https://github.com/yourusername/Particle-System-Physics.git
 cd Particle-System-Physics
-# Add any additional installation steps here
+python -m http.server 9090
+
+Then goto localhost:9090 to view the application
 ```
 
 
