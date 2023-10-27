@@ -6,7 +6,7 @@ class Effect {
         this.width = this.canvas.width;
         this.height = this.canvas.height;
         this.particles = [];
-        this.numberOfParticles = 600;
+        this.numberOfParticles = 200;
         this.createParticles();
     }
 
